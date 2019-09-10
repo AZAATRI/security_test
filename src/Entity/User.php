@@ -8,11 +8,13 @@ class User implements SamlUserInterface
 {
     protected $username;
     private $roles = [];
+
     // ...
 
     public function __construct()
     {
         $this->roles = ['ROLE_USER'];
+        $this->username = "admin";
     }
 
     public function setSamlAttributes(array $attributes)
@@ -37,7 +39,7 @@ class User implements SamlUserInterface
 
     public function getUsername()
     {
-        return "aa";
+        return $this->username;
     }
 
     public function eraseCredentials()

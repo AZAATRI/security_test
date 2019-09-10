@@ -23,11 +23,11 @@ class LoginController extends AbstractController
      * @Route("/login", name="login")
      */
     public function index()
-    {
+    {/*
         $tokenFactory = new SamlTokenFactory();
         $token = $tokenFactory->createToken(new User(),array(),[]);
         $token = $this->authenticationManager->authenticate($token);
-        $this->tokenStorage->setToken($token);
+        $this->tokenStorage->setToken($token);*/
         return $this->render('login/index.html.twig', [
             'controller_name' => 'LoginController',
         ]);
